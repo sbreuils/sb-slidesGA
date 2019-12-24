@@ -81,6 +81,17 @@
 			<!-------------------------------------------------------- Slides -------------------------------------------------------->
 				<section><h3>Discrete Rotation </h3>
 					<ul>
+						<li> Discretization</li>
+						<p>					
+							<small>
+							$\left|
+							\begin{array}{cll}
+							    \lceil . \rceil :& \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
+							    & p_i(x,y) & \mapsto \mathbf{e}_{o} + \lceil x \rceil ＋ \lceil \mathbf{e}_{1}  + \lceil y \rceil\mathbf{e}_{2} + \frac{1}{2} (\lceil x \rceil^2 + \lceil y \rceil^2) \mathbf{e}_{\infty}   
+							\end{array}
+							\right.$
+							</small>
+						</p>
 						<li><b><i> Definition </i> Rotation operator</b> </li>
 						<p>					
 							<small>
@@ -93,18 +104,7 @@
 							$\left|
 							\begin{array}{cll}
 							    r :& \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
-							    & p_i(x,y) & \mapsto \frac{V p_i V^{-1}}{|| V ||}   
-							\end{array}
-							\right.$
-							</small>
-						</p>
-						<li> Discrete rotation</li>
-						<p>					
-							<small>
-							$\left|
-							\begin{array}{cll}
-							    \lceil . \rceil :& \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
-							    & p_i(x,y) & \mapsto \mathbf{e}_{o} + \lceil x \rceil ＋ \lceil \mathbf{e}_{1}  + \lceil y \rceil\mathbf{e}_{2} + \frac{1}{2} (\lceil x \rceil^2 + \lceil y \rceil^2) \mathbf{e}_{\infty}   
+							    & p_i(x,y) & \mapsto \lceil \frac{V p_i V^{-1}}{|| V ||}  \rceil  
 							\end{array}
 							\right.$
 							</small>
