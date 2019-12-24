@@ -81,20 +81,160 @@
 			<!-------------------------------------------------------- Slides -------------------------------------------------------->
 				<section><h3>Discrete Rotation </h3>
 					<ul>
-						<li><b><i> Definition </i> Rotation</b> </li>
+						<li><b><i> Definition </i> Rotation operator</b> </li>
+						<p>					
+							<small>
+							$ V = \alpha = \gamma \gamma = p + q \mathbf{e}_{12}$, $p,q \in \mathbb{Z}$
+							</small>
+						</p>
+						<li> Rotation of a point</li>
 						<p>					
 							<small>
 							$\left|
 							\begin{array}{cll}
-							    V :& \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
-							    & \alpha = \gamma \gamma & \mapsto \alpha 
+							    r :& \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
+							    & p_i(x,y) & \mapsto \frac{V p_i V^{-1}}{|| V ||}   
 							\end{array}
 							\right.$
 							</small>
 						</p>
-						<li> Where $\alpha$ is a bivector representing the rotation </li>
+						<li> Discrete rotation</li>
+						<p>					
+							<small>
+							$\left|
+							\begin{array}{cll}
+							    \lceil . \rceil :& \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
+							    & p_i(x,y) & \mapsto \mathbf{e}_{o} + \lceil x \rceil ＋ \lceil \mathbf{e}_{1}  + \lceil y \rceil\mathbf{e}_{2} + \frac{1}{2} (\lceil x \rceil^2 + \lceil y \rceil^2) \mathbf{e}_{\infty}   
+							\end{array}
+							\right.$
+							</small>
+						</p>
 					</ul>
 				</section>
+			<!-------------------------------------------------------- Slides -------------------------------------------------------->
+				<section><h3>Set of remainders not scaled</h3>
+					<ul>
+						<li><b><i> Definition </i> </b> </li>
+						<p>					
+							<small>
+							$\left|
+							\begin{array}{cll}
+							    s :& \mathbb{G}^{3,1} \times \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
+							    & p_i,p & \mapsto \frac{V }{||V||} p_i - p        
+							\end{array}
+							\right.$
+							</small>
+						</p>
+						<li class="fragment fade-in"> Rotation is bijective iff.	
+							<p>
+								<small>
+								 	$ \forall p \in \mathbb{G}^{3,1}, \exists! p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  D(\mathbf{e}_0)$
+								</small>
+							</p>
+						</li>
+						<li class="fragment fade-in"> Equivalent to	
+							<p>
+								<small>
+									$\left\{
+									\begin{array}{cll}
+									    \forall p \in \mathbb{G}^{3,1}, \exists p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  D(\mathbf{e}_0)      \\
+									    \forall p_i \in \mathbb{G}^{3,1}, \exists p \in \mathbb{G}^{3,1}, s(p_i,p) \in  \frac{V }{||V||}D(\mathbf{e}_0)        
+									\end{array}
+									\right.$
+								</small>
+							</p>
+						</li>
+					</ul>
+				</section>
+
+<!-------------------------------------------------------- Slides -------------------------------------------------------->
+				<section><h3>Set of remainders <font color="red">scaled</font></h3>
+					<ul>
+						<li><b><i> Definition </i> </b> </li>
+						<p>					
+							<small>
+							$\left|
+							\begin{array}{cll}
+							    s :& \mathbb{G}^{3,1} \times \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
+							    & p_i,p & \mapsto V p_i - \color{red}{||V||} p        
+							\end{array}
+							\right.$
+							</small>
+						</p>
+						<li class="fragment fade-in"> Rotation is bijective iff.	
+							<p>
+								<small>
+								 	$ \forall p \in \mathbb{G}^{3,1}, \exists! p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{red}{||V||} D(\mathbf{e}_0)$
+								</small>
+							</p>
+						</li>
+						<li class="fragment fade-in"> Equivalent to	
+							<p>
+								<small>
+									$\left\{
+									\begin{array}{cll}
+									    \forall p \in \mathbb{G}^{3,1}, \exists p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{red}{||V||} D(\mathbf{e}_0)      \\
+									    \forall p_i \in \mathbb{G}^{3,1}, \exists p \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{red}{V} D(\mathbf{e}_0)        
+									\end{array}
+									\right.$
+								</small>
+							</p>
+						</li>
+					</ul>
+				</section>
+
+<!-------------------------------------------------------- Slides -------------------------------------------------------->
+				<section><h3>Set of remainders <font color="red">scaled</font></h3>
+					<ul>
+						<li><b><i> $V = \gamma \gamma$, $|| V || = \gamma \gamma^*$ </i> </b> </li>
+						<p>					
+							<small>
+							$\left|
+							\begin{array}{cll}
+							    s :& \mathbb{G}^{3,1} \times \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
+							    & p_i,p & \mapsto \gamma \gamma p_i - \gamma \gamma^* p =　\gamma （\gamma p_i -  \gamma^* p)       
+							\end{array}
+							\right.$
+							</small>
+						</p>
+					</ul>
+				</section>
+<!-------------------------------------------------------- Slides -------------------------------------------------------->
+				<section><h3>Set of remainders <font color="green">reduced</font></h3>
+					<ul>
+						<li><b><i> Definition </i> </b> </li>
+						<p>					
+							<small>
+							$\left|
+							\begin{array}{cll}
+							    s :& \mathbb{G}^{3,1} \times \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
+							    & p_i,p & \mapsto \color{green}{\gamma} p_i - \color{green}{\gamma^*} p        
+							\end{array}
+							\right.$
+							</small>
+						</p>
+						<li class="fragment fade-in"> Rotation is bijective iff.	
+							<p>
+								<small>
+								 	$ \forall p \in \mathbb{G}^{3,1}, \exists! p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{green}{\gamma^*} D(\mathbf{e}_0)$
+								</small>
+							</p>
+						</li>
+						<li class="fragment fade-in"> Equivalent to	
+							<p>
+								<small>
+									$\left\{
+									\begin{array}{cll}
+									    \forall p \in \mathbb{G}^{3,1}, \exists p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{green}{\gamma^*} D(\mathbf{e}_0)      \\
+									    \forall p_i \in \mathbb{G}^{3,1}, \exists p \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{green}{\gamma} D(\mathbf{e}_0)        
+									\end{array}
+									\right.$
+								</small>
+							</p>
+						</li>
+					</ul>
+				</section>
+
 
 			</div>
 			<div class="slides">
