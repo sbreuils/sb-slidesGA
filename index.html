@@ -26,112 +26,41 @@
 		<div class="reveal">
 			<div class="slides">
 			<!-------------------------------------------------------- Slides -------------------------------------------------------->
-				<section> <h1> Meeting 2019 December, 24th </h1>
-					<h3> Roussillon's proof in details </h3>
+				<section> <h1> Meeting $21^{st}$ January 2020 </h1>
+					<h3> Bijective reflections </h3>
 					<i>Stephane Breuils</i>
 				</section>
 			<!-------------------------------------------------------- Slides -------------------------------------------------------->
 				<section>Last meeting
 					<ul>
-						<li>Link : Andres' paper & discrete rotations</li>
-						<li>Try to understand Roussillon's proof</li>
+						<li>Feedback of Diego's meeting</li>
+						<li> Beginning of set of remainders with discrete Reflections</li>
 					</ul>
 				</section>
 			<!-------------------------------------------------------- Slides -------------------------------------------------------->
 				<section><p>Today</p>
 					<ul>
-						<li>Roussillon's proof in details (Gaussian integers)</li>
+						<li> set of remainders with discrete Reflections, have an intuition</li>
 					</ul>
 				</section>
-			<!-------------------------------------------------------- Slides -------------------------------------------------------->
-				<section><h3>Notations and definitions </h3>
-					<ul>
-						<li> <b><i>Definition </i> Point</b> </li>
-						<p>					
-							$\left|
-							\begin{array}{cll}
-							    p :& \mathbb{Z} \times \mathbb{Z} & \mapsto \mathbb{G}^{3,1}     \\
-							    & (x,y) & \mapsto \mathbf{e}_{o} + x \mathbf{e}_{1} + y \mathbf{e}_{2} + \frac{1}{2} (x^2 + y^2) \mathbf{e}_{\infty}  
-							\end{array}
-							\right.$
-						</p>
-				</section>
-			<!-------------------------------------------------------- Slides -------------------------------------------------------->
-				<section><h3>Notations and definitions </h3>
-					<ul>
-						<li><b><i> Definition </i> Discretization cell</b> </li>
-						<p>					
-							<small>
-							$\left|
-							\begin{array}{cll}
-							    D :& \mathbb{G}^{3,1} & \mapsto \left\{ \mathbb{G}^{3,1} \right\}     \\
-							    & p_i(u,v) & \mapsto \left\{ p(x,y) \in \mathbb{G}^{3,1}, u-\frac{1}{2} \leq x < u + \frac{1}{2} , v-\frac{1}{2} \leq y < v + \frac{1}{2} \right\}  
-							\end{array}
-							\right.$
-							</small>
-						</p>
-						<li> Mostly used in the sequel</li>
-						<p>
-							<small>
-							$ D(\mathbf{e}_0) = \left[ -\frac{1}{2}, \frac{1}{2} \right)^2 $
-							</small>
-						</p>
-					</ul>
-				</section>
-			<!-------------------------------------------------------- Slides -------------------------------------------------------->
-				<section><h3>Discrete Rotation </h3>
-					<ul>
-						<li> Discretization</li>
-						<p>					
-							<small>
-							$\left|
-							\begin{array}{cll}
-							    \lceil . \rceil :& \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
-							    & p_i(x,y) & \mapsto \mathbf{e}_{o} + \lceil x \rceil ＋ \lceil \mathbf{e}_{1}  + \lceil y \rceil\mathbf{e}_{2} + \frac{1}{2} (\lceil x \rceil^2 + \lceil y \rceil^2) \mathbf{e}_{\infty}   
-							\end{array}
-							\right.$
-							</small>
-						</p>
-						<li><b><i> Definition </i> Rotation operator</b> </li>
-						<p>					
-							<small>
-							$ V = \alpha = \gamma \gamma = p + q \mathbf{e}_{12}$, $p,q \in \mathbb{Z}$
-							</small>
-						</p>
-						<li> Rotation of a point</li>
-						<p>					
-							<small>
-							$\left|
-							\begin{array}{cll}
-							    r :& \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
-							    & p_i(x,y) & \mapsto \lceil \frac{V p_i V^{-1}}{|| V ||}  \rceil  
-							\end{array}
-							\right.$
-							</small>
-						</p>
-					</ul>
-				</section>
-
-
-
 			<!-------------------------------------------------------- Slides -------------------------------------------------------->
 				<section><h3>Set of remainders not scaled</h3>
 					<ul>
-						<li><b><i> Definition </i> </b> </li>
+						<li><b><i> At our last meeting </i> </b> </li>
 						<p>					
 							<small>
 							$\left|
 							\begin{array}{cll}
-							    s :& \mathbb{G}^{3,1} \times \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
-							    & p_i,p & \mapsto \frac{V }{||V||} p_i - p        
+							    s :& \mathbb{G}^{2,1} \times \mathbb{G}^{2,1} & \mapsto \mathbb{G}^{2,1}      \\
+							    & x,y & \mapsto -\mathbf{m} x  \mathbf{m}^{-1} - y       
 							\end{array}
 							\right.$
 							</small>
 						</p>
-						<li class="fragment fade-in"> Rotation is bijective iff.	
+						<li class="fragment fade-in"> Reflection is bijective iff.	
 							<p>
 								<small>
-								 	$ \forall p \in \mathbb{G}^{3,1}, \exists! p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  D(\mathbf{e}_0)$
+								 	$ \forall y \in \mathbb{G}^{2,1}, \exists! x \in \mathbb{G}^{2,1}, s(x,y) \in  D(\mathbf{e}_0)$
 								</small>
 							</p>
 						</li>
@@ -140,8 +69,8 @@
 								<small>
 									$\left\{
 									\begin{array}{cll}
-									    \forall p \in \mathbb{G}^{3,1}, \exists p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  D(\mathbf{e}_0)      \\
-									    \forall p_i \in \mathbb{G}^{3,1}, \exists p \in \mathbb{G}^{3,1}, s(p_i,p) \in  \frac{V }{||V||}D(\mathbf{e}_0)        
+									    \forall y \in \mathbb{G}^{2,1}, \exists x \in \mathbb{G}^{2,1}, s(x,y) \in  D(\mathbf{e}_0)      \\
+									    \forall x \in \mathbb{G}^{2,1}, \exists y \in \mathbb{G}^{2,1}, s(x,y) \in  -m D(\mathbf{e}_0) m^{-1}         
 									\end{array}
 									\right.$
 								</small>
@@ -149,6 +78,124 @@
 						</li>
 					</ul>
 				</section>
+
+			<!-------------------------------------------------------- Slides -------------------------------------------------------->
+				<section><h3>Set of remainders not scaled</h3>
+					<ul>
+						<li><b><i> At our last meeting </i> </b> </li>
+						<p>					
+							<small>
+							$\left|
+							\begin{array}{cll}
+							    t :& \mathbb{G}^{2,1} \times \mathbb{G}^{2,1} & \mapsto \mathbb{G}^{2,1}      \\
+							    & x,y & \mapsto -\mathbf{m} x  \mathbf{m}^{-1}  \mathbf{m} - y \mathbf{m}       
+							\end{array}
+							\right.$
+							</small>
+						</p>
+						<li class="fragment fade-in"> Reflection is bijective iff.	
+							<p>
+								<small>
+								 	$ \forall y \in \mathbb{G}^{2,1}, \exists! x \in \mathbb{G}^{2,1}, s(x,y) \in  D(\mathbf{e}_0){\mathbf{m}}$
+								</small>
+							</p>
+						</li>
+						<li class="fragment fade-in"> Equivalent to	
+							<p>
+								<small>
+									$\left\{
+									\begin{array}{cll}
+									    \forall y \in \mathbb{G}^{2,1}, \exists x \in \mathbb{G}^{2,1}, s(x,y) \in  D(\mathbf{e}_0)  {\mathbf{m}}    \\
+									    \forall x \in \mathbb{G}^{2,1}, \exists y \in \mathbb{G}^{2,1}, s(x,y) \in  -m D(\mathbf{e}_0) m^{-1} {\mathbf{m}}        
+									\end{array}
+									\right.$
+								</small>
+							</p>
+						</li>
+					</ul>
+				</section>
+
+						<!-------------------------------------------------------- Slides -------------------------------------------------------->
+				<section><h3>Problem</h3>
+					<ul>
+						<li><b><i> No geometric meaning </i> </b> </li>
+						<li class="fragment fade-in"> Change the factor 	
+						</li>
+					</ul>
+				</section>
+
+
+				<section><h3>Set of remainders </h3>
+					<ul>
+						<li><b><i> At our last meeting </i> </b> </li>
+						<p>					
+							<small>
+							$\left|
+							\begin{array}{cll}
+							    u :& \mathbb{G}^{2,1} \times \mathbb{G}^{2,1} & \mapsto \mathbb{G}^{2,1}      \\
+							    & x,y & \mapsto -\mathbf{m} x  \mathbf{m}^{-1}  \mathbf{m} \mathbf{m}^{\thicksim} - y \mathbf{m} \mathbf{m}^{\thicksim}       
+							\end{array}
+							\right.$
+							</small>
+						</p>
+						<li class="fragment fade-in"> Reflection is bijective iff.	
+							<p>
+								<small>
+								 	$ \forall y \in \mathbb{G}^{2,1}, \exists! x \in \mathbb{G}^{2,1}, s(x,y) \in  D(\mathbf{e}_0) \mathbf{m} \mathbf{m}^{\thicksim}$
+								</small>
+							</p>
+						</li>
+						<li class="fragment fade-in"> Equivalent to	
+							<p>
+								<small>
+									$\left\{
+									\begin{array}{cll}
+									    \forall y \in \mathbb{G}^{2,1}, \exists x \in \mathbb{G}^{2,1}, s(x,y) \in  D(\mathbf{e}_0) \mathbf{m} \mathbf{m}^{\thicksim}    \\
+									    \forall x \in \mathbb{G}^{2,1}, \exists y \in \mathbb{G}^{2,1}, s(x,y) \in  -m D(\mathbf{e}_0) m^{-1} \mathbf{m} \mathbf{m}^{\thicksim}       
+									\end{array}
+									\right.$
+								</small>
+							</p>
+						</li>
+					</ul>
+				</section>
+
+								<section><h3>Set of remainders </h3>
+					<ul>
+						<li><b><i> At our last meeting </i> </b> </li>
+						<p>					
+							<small>
+							$\left|
+							\begin{array}{cll}
+							    u :& \mathbb{G}^{2,1} \times \mathbb{G}^{2,1} & \mapsto \mathbb{G}^{2,1}      \\
+							    & x,y & \mapsto -\mathbf{m} x   \mathbf{m}^{\thicksim} - y \mathbf{m}^2       
+							\end{array}
+							\right.$
+							</small>
+						</p>
+						<li class="fragment fade-in"> Reflection is bijective iff.	
+							<p>
+								<small>
+								 	$ \forall y \in \mathbb{G}^{2,1}, \exists! x \in \mathbb{G}^{2,1}, s(x,y) \in  D(\mathbf{e}_0) \mathbf{m} \mathbf{m}^{\thicksim}$
+								</small>
+							</p>
+						</li>
+						<li class="fragment fade-in"> Equivalent to	
+							<p>
+								<small>
+									$\left\{
+									\begin{array}{cll}
+									    \forall y \in \mathbb{G}^{2,1}, \exists x \in \mathbb{G}^{2,1}, s(x,y) \in  D(\mathbf{e}_0) \mathbf{m} ^2   \\
+									    \forall x \in \mathbb{G}^{2,1}, \exists y \in \mathbb{G}^{2,1}, s(x,y) \in  -m D(\mathbf{e}_0) \mathbf{m}^{\thicksim}       
+									\end{array}
+									\right.$
+								</small>
+							</p>
+						</li>
+					</ul>
+				</section>
+
+
 
 				<!-------------------------------------------------------- Slides -------------------------------------------------------->
 				<section><h3>Set of remainders </h3>
@@ -158,133 +205,17 @@
 						<li><b><i> Non-bijective  </i></b> </li>
 					<img class="plain" src="setOfRemaindersNotBijective.jpg"  height="220" width="330">
 					</ul>
+					<ul>
+						<li><b><i> script  </i></b> </li>
+					</ul>
+					
 				</section>
 
 
-
 <!-------------------------------------------------------- Slides -------------------------------------------------------->
-				<section><h3>Set of remainders <font color="red">scaled</font></h3>
+				<section><h3>For next meeting </font></h3>
 					<ul>
-						<li><b><i> Definition </i> </b> </li>
-						<p>					
-							<small>
-							$\left|
-							\begin{array}{cll}
-							    s :& \mathbb{G}^{3,1} \times \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
-							    & p_i,p & \mapsto V p_i - \color{red}{||V||} p        
-							\end{array}
-							\right.$
-							</small>
-						</p>
-						<li class="fragment fade-in"> Rotation is bijective iff.	
-							<p>
-								<small>
-								 	$ \forall p \in \mathbb{G}^{3,1}, \exists! p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{red}{||V||} D(\mathbf{e}_0)$
-								</small>
-							</p>
-						</li>
-						<li class="fragment fade-in"> Equivalent to	
-							<p>
-								<small>
-									$\left\{
-									\begin{array}{cll}
-									    \forall p \in \mathbb{G}^{3,1}, \exists p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{red}{||V||} D(\mathbf{e}_0)      \\
-									    \forall p_i \in \mathbb{G}^{3,1}, \exists p \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{red}{V} D(\mathbf{e}_0)        
-									\end{array}
-									\right.$
-								</small>
-							</p>
-						</li>
-					</ul>
-				</section>
-
-<!-------------------------------------------------------- Slides -------------------------------------------------------->
-				<section><h3>Set of remainders <font color="red">scaled</font></h3>
-					<ul>
-						<li><b><i> $V = \gamma \gamma$, $|| V || = \gamma \gamma^*$ </i> </b> </li>
-						<p>					
-							<small>
-							$\left|
-							\begin{array}{cll}
-							    s :& \mathbb{G}^{3,1} \times \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
-							    & p_i,p & \mapsto \gamma \gamma p_i - \gamma \gamma^* p =　\gamma （\gamma p_i -  \gamma^* p)       
-							\end{array}
-							\right.$
-							</small>
-						</p>
-					</ul>
-				</section>
-<!-------------------------------------------------------- Slides -------------------------------------------------------->
-				<section><h3>Set of remainders <font color="green">reduced</font></h3>
-					<ul>
-						<li><b><i> Definition </i> </b> </li>
-						<p>					
-							<small>
-							$\left|
-							\begin{array}{cll}
-							    s :& \mathbb{G}^{3,1} \times \mathbb{G}^{3,1} & \mapsto \mathbb{G}^{3,1}      \\
-							    & p_i,p & \mapsto \color{green}{\gamma} p_i - \color{green}{\gamma^*} p        
-							\end{array}
-							\right.$
-							</small>
-						</p>
-						<li class="fragment fade-in"> Rotation is bijective iff.	
-							<p>
-								<small>
-								 	$ \forall p \in \mathbb{G}^{3,1}, \exists! p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{green}{\gamma^*} D(\mathbf{e}_0)$
-								</small>
-							</p>
-						</li>
-						<li class="fragment fade-in"> Equivalent to	
-							<p>
-								<small>
-									$\left\{
-									\begin{array}{cll}
-									    \forall p \in \mathbb{G}^{3,1}, \exists p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{green}{\gamma^*} D(\mathbf{e}_0)      \\
-									    \forall p_i \in \mathbb{G}^{3,1}, \exists p \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{green}{\gamma} D(\mathbf{e}_0)        
-									\end{array}
-									\right.$
-								</small>
-							</p>
-						</li>
-					</ul>
-				</section>
-<!-------------------------------------------------------- Slides -------------------------------------------------------->
-				<section><h3>Condition on $\gamma$ </font></h3>
-					<ul>
-						<li><b><i> Constraint </i> </b> </li>
-							<p>
-								<small>
-									$\left\{
-									\begin{array}{cll}
-									    \forall p \in \mathbb{G}^{3,1}, \exists p_i \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{green}{\gamma^*} D(\mathbf{e}_0)      \\
-									    \forall p_i \in \mathbb{G}^{3,1}, \exists p \in \mathbb{G}^{3,1}, s(p_i,p) \in  \color{green}{\gamma} D(\mathbf{e}_0)        
-									\end{array}
-									\right.$
-								</small>
-							</p>
-						</li>
-						<li class="fragment fade-in"> if	
-							<p>
-								<small>
-								 	$ \gamma = (q + 1) + q \mathbf{e}_{12}$
-								</small>
-							</p>
-						</li>
-						<li class="fragment fade-in"> then	
-							<p>
-								<small>
-								 	boundaries of $ \gamma D(\mathbf{e}_0),\gamma^* D(\mathbf{e}_0)  $ between 2 L1 balls of radius $q$ and $q+1 \Rightarrow $
-								 	$s(p_i,p) \in {\gamma} D(\mathbf{e}_0)$ and $s(p_i,p) \in {\gamma^*} D(\mathbf{e}_0)$
-								</small>
-							</p>
-						</li>
-					</ul>
-				</section>
-<!-------------------------------------------------------- Slides -------------------------------------------------------->
-				<section><h3>Before this Friday </font></h3>
-					<ul>
-						<li><b><i> Finish the first revisions of the paper</i> </b> </li>
+						<li><b><i> Angles and proof</i> </b> </li>
 					</ul>
 				</section>
 			</div>
